@@ -5,4 +5,5 @@ rspec-rails -v 1.3.2
 autotest-rails -v 4.1.0
 autotest-notification -v 2.3.0
 redgreen -v 1.2.2
+webrat -v 0.7.1
 

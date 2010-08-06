@@ -7,6 +7,13 @@ require 'spec/rails'
 
 # Uncomment the next line to use webrat's matchers
 #require 'webrat/integrations/rspec-rails'
+#Clayton Rocker - added to configure webrat for Ruby on Rails Tutorial 2.3 Chapter 5 exercise
+require "webrat"
+
+  Webrat.configure do |config|
+    config.mode = :rails
+  end
+
 
 # Requires supporting files with custom matchers and macros, etc,
 # in ./support/ and its subdirectories.
@@ -52,3 +59,4 @@ Spec::Runner.configure do |config|
   #
   # For more information take a look at Spec::Runner::Configuration and Spec::Runner
 end
+
