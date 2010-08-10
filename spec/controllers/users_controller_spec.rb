@@ -75,8 +75,7 @@ describe UsersController do
 
       it "should not show destroy link" do
         get :index
-        #TODO Need to fix this
-        response.should be_success
+        response.should_not have_tag("a[onclick]", :text => "delete")
       end
     end
   end
@@ -107,6 +106,14 @@ describe UsersController do
     it "should have a profile image" do
       get :show, :id => @user
       response.should have_tag("h2>img", :class => "gravatar")
+    end
+
+    it "should show the user's microposts" do
+      mp1 = Factory(:micropost, :user => @user, :content => "Foo bar")
+      mp2 = Factory(:micropost, :user => @user, :content => "Baz quux")
+      get :show, :id => @user
+      response.should have_tag("span.content", mp1.content)
+      response.should have_tag("span.content", mp2.content)
     end
   end
 
