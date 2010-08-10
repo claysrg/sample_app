@@ -1,11 +1,3 @@
-rails -v 2.3.8
-sqlite3-ruby -v 1.3.1
-rspec -v 1.3.0
-rspec-rails -v 1.3.2
-autotest-rails -v 4.1.0
-autotest-notification -v 2.3.0
-redgreen -v 1.2.2
-webrat -v 0.7.1
-annotate-models -v 1.0.4
-factory_girl -v 1.3.2
+will_paginate --version 2.3.12
+faker
 
